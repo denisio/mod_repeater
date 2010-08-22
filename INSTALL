@@ -1,0 +1,16 @@
+1) Unpack to /.../nginx-0.7.*/src/http/modules
+2) ./configure --with-debug --add-module=/.../nginx-0.7.*/src/http/modules/repeater
+3) make
+4) make install
+
+[nginx.conf] example:
+
+. . .
+server {
+  . . .
+  repeater 127.0.0.1:10000;
+  . . .
+}
+. . .
+
+Enjoy!
